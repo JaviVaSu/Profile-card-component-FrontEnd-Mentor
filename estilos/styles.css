@@ -1,0 +1,140 @@
+:root{
+    /*Colores primarios*/
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    /*Color Neutral*/
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Kumbh Sans", sans-serif, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40vh;
+    width: 90%;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+@media (min-width: 400px){
+    .contenedor{
+        width: 39rem;
+    }
+}
+
+.contenedor-cabecera{
+    width: 100%;
+    height: 40%;
+    background-image: url(/images/bg-pattern-card.svg);
+}
+
+.contenedor-imagen{
+    display: flex;
+    justify-content: center;
+    margin-top: 9.5rem;
+}
+
+.contenedor-imagen img{
+    border-radius: 50%;
+    width: 32%;
+    border: .5rem solid white;
+}
+
+.contenedor-autor{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.contenedor-autor p{
+    color: var(--Dark-gray);
+}
+
+.contenedor-autor strong{
+    color: var(--Very-dark-desaturated-blue);
+    margin-right: 1rem;
+}
+
+.contenedor-autor .nombre{
+    font-size: 2rem;
+}
+
+.contenedor-autor .ciudad{
+    font-size: 1.6rem;
+}
+
+.contenedor-estadisticas{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    border-top: 1px solid var(--Dark-gray);
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contenedor-estadisticas .numero{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contenedor-estadisticas .info{
+    color: var(--Dark-gray);
+    letter-spacing: 2px;
+}
+
+.background{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Dark-cyan);
+    overflow: hidden;
+}
+
+.background::before{
+    content: "";
+    position: absolute;
+    background-image: url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+.background::after{
+    content: "";
+    position: absolute;
+    background-image: url(/images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 45%;
+    right: 0;
+}
